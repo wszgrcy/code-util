@@ -661,13 +661,19 @@ async function cloneRepo(cloneMode: boolean) {
         console.log(`${item.name}:用时${(Date.now() - a) / 1000}`);
         clearTimeout(warn);
     }
-    const q = fastq.promise(buildGrammar, 1);
 
     console.log('语法1长度', list.length);
 
-    let waitList = [];
-    let languageList = [];
-    for (const item of list) {
+    const firstItem = list[0];
+    await buildGrammar(firstItem);
+    if (errorList.length > 0) {
+        throw new Error(`首个任务执行失败:${JSON.stringify(errorList)}`);
+    }
+    const languageList = [firstItem.name];
+
+    const q = fastq.promise(buildGrammar, 4);
+    let waitList: Promise<any>[] = [];
+    for (const item of list.slice(1)) {
         waitList.push(q.push(item));
         languageList.push(item.name);
     }
