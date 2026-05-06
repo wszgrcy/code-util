@@ -8,7 +8,7 @@ import normalizePath from 'normalize-path';
 const pomFileName = `pom.xml`;
 let rootPathName = `antlr/grammars`;
 const saveDir = path.join(process.cwd(), `src/${rootPathName}`);
-const javaParamsList = [`-Xmx500M`, `-cp`, `"./lib/antlr-4.13.2-complete.jar"`, `org.antlr.v4.Tool`];
+const javaParamsList = [`-Xmx500M`, `-cp`, `./lib/antlr-4.13.2-complete.jar`, `org.antlr.v4.Tool`];
 let grammarRootPath = path.join(process.cwd(), `lib/grammars-v4`);
 let filePrefix = 'https://raw.githubusercontent.com/antlr/grammars-v4/master';
 const unSupportLanguageList = [
