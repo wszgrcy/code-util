@@ -337,7 +337,7 @@ async function cloneRepo(cloneMode: boolean) {
         }),
         // todo 等待修复
         // 路径 grammars
-        buildTemplate({ packageName: 'ocaml', prefix: 'grammars/ocaml' }),
+        buildTemplate({ exportName: 'ocaml', packageName: 'ocaml', prefix: 'grammars/ocaml' }),
         buildTemplate({ packageName: 'ocaml', prefix: 'grammars/interface', exportName: 'ocaml_interface' }),
         buildTemplate({
             packageName: 'odin',
