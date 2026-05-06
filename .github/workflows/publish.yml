@@ -1,4 +1,4 @@
-name: Build Grammars
+name: Publish
 
 on:
   push:

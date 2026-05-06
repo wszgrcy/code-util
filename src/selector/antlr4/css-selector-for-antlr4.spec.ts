@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { createCssSelectorForAntlr4 } from './css-selector-for-antlr4';
 import * as fs from 'fs';
 import * as path from 'path';
-if (process.env.CI !== 'true') {
+if (!process.env.CI) {
     const mockData = `body
     {
         color:red;}`;

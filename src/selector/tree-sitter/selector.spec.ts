@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { createCssSelectorForTreeSitter } from './selector';
 import * as fs from 'fs';
 import * as path from 'path';
-if (process.env.CI !== 'true') {
+if (!process.env.CI) {
     describe('tree-sitter', () => {
         //! 运行之前需要编译
         describe('typescript', () => {
