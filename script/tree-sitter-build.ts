@@ -378,10 +378,10 @@ async function cloneRepo(cloneMode: boolean) {
         //     repo: 'https://github.com/tree-sitter-perl/tree-sitter-pod.git',
         //     branch: 'main',
         // }),
-        buildTemplate({
-            packageName: 'pgn',
-            repo: 'https://github.com/rolandwalker/tree-sitter-pgn.git',
-        }),
+        // buildTemplate({
+        //     packageName: 'pgn',
+        //     repo: 'https://github.com/rolandwalker/tree-sitter-pgn.git',
+        // }),
         //todo 等待修改
         buildTemplate({ packageName: 'php', prefix: 'php' }),
         buildTemplate({ packageName: 'php', prefix: 'php_only' }),
