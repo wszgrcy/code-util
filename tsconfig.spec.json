@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": ["./src/**/*.spec.ts"],
+  "exclude": [],
+  "compilerOptions": {
+    "module": "ES2022",
+    "moduleResolution": "Node",
+    "paths": {
+      "cyia-code-util": ["./src/index.ts"]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "tree-sitter-wasm-bundle",
+  "version": "0.0.3",
+  "description": "这是一个 web-tree-sitter 使用的 wasm 已构建包.未来将根据官网库来构建;0.22.1构建",
+  "main": "dist/index.js",
+  "private": false,
+  "author": "wszgrcy"
+}

@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {},
+  "include": [],
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.build.json"
+    },
+    {
+      "path": "./tsconfig.main.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./tsconfig.script.json"
+    },
+    {
+      "path": "./tsconfig.build-antlr-parser.json"
+    }
+  ]
+}

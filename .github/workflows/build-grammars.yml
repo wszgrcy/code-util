@@ -1,0 +1,38 @@
+name: Build Grammars
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Checkout grammars-v4
+        uses: actions/checkout@v6
+        with:
+          repository: antlr/grammars-v4
+          path: lib/grammars-v4
+          fetch-depth: 1
+
+      - name: Build antlr language
+        run: npm run build:antlr-language
+
+      - name: Build tree-sitter
+        run: npm run build:tree-sitter

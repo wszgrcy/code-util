@@ -1,0 +1,2 @@
+@DDD()
+class ABC {}

@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": ["src/antlr/**/*.ts"],
+  "exclude": ["src/**/*.spec.ts"],
+  "compilerOptions": {
+    "outDir": "dist/antlr",
+    "declaration": false,
+    "module": "ES2022",
+    "target": "ES2022",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "strict": false,
+    "paths": {}
+  }
+}

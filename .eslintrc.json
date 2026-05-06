@@ -1,0 +1,49 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/semi": "warn",
+    "curly": "warn",
+    "eqeqeq": "warn",
+    "no-throw-literal": "warn",
+    "semi": "off",
+    "no-underscore-dangle": "off",
+    "@typescript-eslint/member-ordering": "off",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "object-shorthand": "off",
+    "prefer-const": "warn",
+    "@typescript-eslint/type-annotation-spacing": "warn",
+    "@typescript-eslint/member-delimiter-style": "warn",
+    "no-trailing-spaces": ["warn"],
+    "@typescript-eslint/quotes": ["warn", "single"],
+    "@typescript-eslint/no-unused-expressions": "warn",
+    "no-bitwise": "off",
+    "@typescript-eslint/ban-types": "warn",
+    "max-len": "off",
+    "space-before-function-paren": "off",
+    "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "@typescript-eslint/dot-notation": "off",
+    "no-undef-init": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/prefer-for-of": "off",
+    "eol-last": "warn",
+    "arrow-body-style": "warn",
+    "prefer-arrow/prefer-arrow-functions": 0,
+    "no-fallthrough": "warn",
+    "quotes": ["warn", "single"],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "off"
+  },
+  "ignorePatterns": ["src/antlr/**/*"]
+}

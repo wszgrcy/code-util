@@ -1,0 +1,22 @@
+{
+  "name": "@cyia/parser-antlr4",
+  "version": "1.0.2",
+  "description": "antlr grammars bundle",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wszgrcy/code-recycle.git"
+  },
+  "sideEffects": false,
+  "author": "wszgrcy",
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/wszgrcy/code-recycle/issues"
+  },
+  "exports": {
+    "./manifest.json": "./manifest.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

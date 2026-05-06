@@ -1,0 +1,92 @@
+{
+  "name": "@cyia/code-util",
+  "version": "2.7.17",
+  "type": "module",
+  "description": "代码工具",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wszgrcy/cyia-code-util.git"
+  },
+  "sideEffects": false,
+  "author": "wszgrcy",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wszgrcy/cyia-code-util/issues"
+  },
+  "homepage": "https://github.com/wszgrcy/cyia-code-util#readme",
+  "peerDependencies": {},
+  "dependencies": {
+    "css-what": "6.1.0",
+    "htmlparser2": "9.1.0",
+    "jsonc-parser": "3.2.1",
+    "nth-check": "2.1.1",
+    "pgsql-ast-parser": "12.0.1",
+    "css-tree": "2.3.1",
+    "chevrotain": "11.0.3",
+    "magic-string": "0.30.10",
+    "yaml": "^2.4.1"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    },
+    "./selector/angular": {
+      "types": "./selector/angular/index.d.ts",
+      "import": "./selector/angular/index.js"
+    },
+    "./selector/antlr4": {
+      "types": "./selector/antlr4/index.d.ts",
+      "import": "./selector/antlr4/index.js"
+    },
+    "./selector/css": {
+      "types": "./selector/css/index.d.ts",
+      "import": "./selector/css/index.js"
+    },
+    "./selector/htmlparser2": {
+      "types": "./selector/htmlparser2/index.d.ts",
+      "import": "./selector/htmlparser2/index.js"
+    },
+    "./selector/jsonc-paraser": {
+      "types": "./selector/jsonc-paraser/index.d.ts",
+      "import": "./selector/jsonc-paraser/index.js"
+    },
+    "./selector/lezer": {
+      "types": "./selector/lezer/index.d.ts",
+      "import": "./selector/lezer/index.js"
+    },
+    "./selector/pgsql": {
+      "types": "./selector/pgsql/index.d.ts",
+      "import": "./selector/pgsql/index.js"
+    },
+    "./selector/tree-sitter": {
+      "types": "./selector/tree-sitter/index.d.ts",
+      "import": "./selector/tree-sitter/index.js"
+    },
+    "./selector/vue": {
+      "types": "./selector/vue/index.d.ts",
+      "import": "./selector/vue/index.js"
+    },
+    "./selector/yaml": {
+      "types": "./selector/yaml/index.d.ts",
+      "import": "./selector/yaml/index.js"
+    },
+    "./selector/ts": {
+      "types": "./selector/ts/index.d.ts",
+      "import": "./selector/ts/index.js"
+    },
+    "./change": {
+      "types": "./change/index.d.ts",
+      "import": "./change/index.js"
+    },
+    "./updater": {
+      "types": "./updater/index.d.ts",
+      "import": "./updater/index.js"
+    },
+    "./antlr/grammars/manifest.json": "./antlr/grammars/manifest.json",
+    "./extname.json": "./extname.json",
+    "./parser-list.json": "./parser-list.json"
+  }
+}

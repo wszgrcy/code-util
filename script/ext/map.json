@@ -1,0 +1,14 @@
+[
+  {
+    "ext": [".vue"],
+    "lang": ["vue"]
+  },
+  {
+    "ext": [".sass"],
+    "lang": ["scss", "sass"]
+  },
+  {
+    "ext": [".cs"],
+    "lang": ["csharp", "c_sharp"]
+  }
+]

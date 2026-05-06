@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": ["src/index.ts", "src/selector/**/*.ts", "src/change/index.ts", "src/updater"],
+  "exclude": ["src/**/*.spec.ts", "src/**/*.xspec.ts"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "module": "ES2022",
+    "target": "ES2022",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "strict": false,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "paths": {},
+    "stripInternal": true
+  }
+}
