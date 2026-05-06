@@ -178,7 +178,6 @@ class LanguageParser {
             ];
             let res = cp.spawnSync('java', [...javaParamsList, ...antlrParams], {
                 stdio: 'inherit',
-                shell: 'zsh',
                 env: process.env,
             });
             if (res.error) {
