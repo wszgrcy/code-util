@@ -32,8 +32,11 @@ jobs:
           fetch-depth: 1
 
       - name: Download ANTLR jar
-        run: wget https://www.antlr.org/download/antlr-4.13.2-complete.jar -O lib/antlr-4.13.2-complete.jar
-
+        run: wget https://www.antlr.org/download/antlr-4.13.2-complete.jar -O
+          lib/antlr-4.13.2-complete.jar
+      - run: |
+          ls -lh
+          ls ./lib -lh
       - name: Build antlr language
         run: npm run build:antlr-language
 
