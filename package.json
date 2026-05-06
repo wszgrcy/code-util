@@ -9,7 +9,6 @@
     "test": "rimraf ./test-dist && tsx --tsconfig ./tsconfig.script.json ./script/test.esbuild.ts && mocha \"./test-dist/**/*.spec.mjs\" --enable-source-maps --inspect",
     "coverage": "c8 npm run test",
     "deploy": "typedoc --out docs src/index.ts",
-    "release-publish": "npm run build && npm  --registry=http://lan-server.chloc:5555 publish ./dist",
     "build:antlr-language": "rimraf ./src/antlr/grammars && node --import tsx/esm ./script/antlr-convert.ts ",
     "build:extname": "node --import tsx/esm ./script/ext/main.ts",
     "build:ts": "tsx --tsconfig ./tsconfig.script.json ./script/ts-build.esbuild.ts",

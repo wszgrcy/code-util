@@ -5,17 +5,18 @@
   "description": "代码工具",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wszgrcy/cyia-code-util.git"
+    "url": "git+https://github.com/wszgrcy/code-util"
   },
   "sideEffects": false,
+  "private": false,
   "author": "wszgrcy",
   "main": "index.js",
   "typings": "index.d.ts",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wszgrcy/cyia-code-util/issues"
+    "url": "https://github.com/wszgrcy/code-util/issues"
   },
-  "homepage": "https://github.com/wszgrcy/cyia-code-util#readme",
+  "homepage": "https://github.com/wszgrcy/code-util#readme",
   "peerDependencies": {},
   "dependencies": {
     "@lezer/cpp": "^1.1.2",
@@ -107,5 +108,8 @@
     "./antlr/grammars/manifest.json": "./antlr/grammars/manifest.json",
     "./extname.json": "./extname.json",
     "./parser-list.json": "./parser-list.json"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
