@@ -73,6 +73,7 @@ const unSupportLanguageList = [
     'kirikiri-tjs',
     // antlr4ts
     'pegen',
+    'java',
 ];
 async function main(grammarDir: string) {
     let configList = await new GrammarRead().parser();
@@ -215,7 +216,13 @@ class LanguageParser {
         let resultList: LanguageResultList = [];
         for (const item of list) {
             // python3_12_0 没有ts版本,自己搞oom了,猜测是new token问题
-            if (item === 'tiny-python' || item === 'python3_12_0') {
+            if (
+                item === 'tiny-python' ||
+                item === 'python3_12_0' ||
+                item === 'csharp/v6' ||
+                item === 'python2_7_18' ||
+                item === 'python3_13'
+            ) {
                 continue;
             }
             let instance = new LanguageParser(path.join(this.fileDir, item), [...this.levelList, item], [...this.idList, this.id]);
