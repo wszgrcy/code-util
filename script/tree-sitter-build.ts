@@ -661,7 +661,7 @@ async function cloneRepo(cloneMode: boolean) {
         console.log(`${item.name}:用时${(Date.now() - a) / 1000}`);
         clearTimeout(warn);
     }
-    const q = fastq.promise(buildGrammar, 4);
+    const q = fastq.promise(buildGrammar, 1);
 
     console.log('语法1长度', list.length);
 
