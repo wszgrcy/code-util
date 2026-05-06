@@ -2,7 +2,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 import { homedir } from 'os';
 import { createCssSelectorForHtmlParser2 } from '../src/selector/htmlparser2/css-selector-for-htmlparser2';
-import _ from 'lodash';
+import _, { reject } from 'lodash';
 import * as cp from 'child_process';
 import normalizePath from 'normalize-path';
 const pomFileName = `pom.xml`;
@@ -67,6 +67,9 @@ const unSupportLanguageList = [
     'rego',
     // base导出问题
     'typescript',
+    'eiffel',
+    'python',
+    'php',
     // antlr4ts
     'pegen',
 ];
@@ -176,12 +179,14 @@ class LanguageParser {
                 `-o`,
                 normalizePath(path.relative(process.cwd(), path.normalize(dir))),
             ];
-            let res = cp.spawnSync('java', [...javaParamsList, ...antlrParams], {
-                stdio: 'inherit',
-                env: process.env,
-            });
-            if (res.error) {
-                throw res.error;
+            let { $ } = await import('execa');
+            let res = await $({ stdio: 'inherit', reject: false })('java', [...javaParamsList, ...antlrParams]);
+            // let res = cp.spawnSync('java', [...javaParamsList, ...antlrParams], {
+            //     stdio: 'inherit',
+            //     env: process.env,
+            // });
+            if (res.failed) {
+                throw res.stderr;
             }
         }
         let indexFile = [
