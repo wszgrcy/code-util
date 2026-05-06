@@ -5,7 +5,7 @@
   "description": "代码工具",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wszgrcy/code-util"
+    "url": "git+https://github.com/wszgrcy/code-util.git"
   },
   "sideEffects": false,
   "private": false,
