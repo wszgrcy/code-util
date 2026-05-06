@@ -18,26 +18,10 @@ async function main() {
         outdir: path.join(process.cwd(), '/dist'),
         format: 'esm',
         keepNames: false,
+        sourcemap: true,
+        packages: 'external',
         // minify: true,
         tsconfig: 'tsconfig.build.json',
-        external: [
-            'css-what',
-            'css-tree',
-            '@lezer/common',
-            '@lezer/lr',
-            'pgsql-ast-parser',
-            'typescript',
-            '@angular/compiler',
-            'htmlparser2',
-            'domhandler',
-            'jsonc-parser',
-            'nth-check',
-            '@vue/compiler-dom',
-            'web-tree-sitter',
-            'chevrotain',
-            'magic-string',
-            'yaml',
-        ],
     };
     await esbuild.build(options);
 }
