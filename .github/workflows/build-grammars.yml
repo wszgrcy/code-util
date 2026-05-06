@@ -37,6 +37,8 @@ jobs:
       - run: |
           ls -lh
           ls ./lib -lh
+          java --version
+          java -Xmx500M -cp "./lib/antlr-4.13.2-complete.jar" org.antlr.v4.Tool
       - name: Build antlr language
         run: npm run build:antlr-language
 
