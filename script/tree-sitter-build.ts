@@ -647,7 +647,7 @@ async function cloneRepo(cloneMode: boolean) {
     async function buildGrammar(item: ReturnType<typeof buildTemplate>) {
         let a = Date.now();
         console.log('准备执行', item.name, item.command);
-        let warn = setTimeout(() => {
+        let warn = setInterval(() => {
             console.log('执行缓慢:', item.name, item.command);
         }, 60 * 1000);
         for (const commandItem of item.command) {
@@ -659,7 +659,7 @@ async function cloneRepo(cloneMode: boolean) {
             }
         }
         console.log(`${item.name}:用时${(Date.now() - a) / 1000}`);
-        clearTimeout(warn);
+        clearInterval(warn);
     }
 
     console.log('语法1长度', list.length);

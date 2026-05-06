@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-antlr:
     runs-on: ubuntu-latest
 
     steps:
@@ -34,13 +34,25 @@ jobs:
       - name: Download ANTLR jar
         run: wget https://www.antlr.org/download/antlr-4.13.2-complete.jar -O
           lib/antlr-4.13.2-complete.jar
-      - run: |
-          ls -lh
-          ls ./lib -lh
-          java --version
-          java -Xmx500M -cp "./lib/antlr-4.13.2-complete.jar" org.antlr.v4.Tool
+
       - name: Build antlr language
         run: npm run build:antlr-language
+
+  build-tree-sitter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Build tree-sitter
         run: npm run build:tree-sitter
