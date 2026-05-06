@@ -70,6 +70,7 @@ const unSupportLanguageList = [
     'eiffel',
     'python',
     'php',
+    'kirikiri-tjs',
     // antlr4ts
     'pegen',
 ];

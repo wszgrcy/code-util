@@ -17,7 +17,7 @@
     "build:tree-sitter": "node --import tsx/esm ./script/tree-sitter-build.ts",
     "copy:tree-sitter": "cpx ./lib/tree-sitter/**/* ../tree-sitter-build",
     "lint": "eslint --fix src --ext ts && prettier ./src --write",
-    "build:antlr-language:esbuild": "rimraf ./packages/antlr/grammars && rimraf ./packages/antlr/chunk*.js && tsx --tsconfig ./tsconfig.script.json ./script/antlr.esbuild.ts && cpx ./src/antlr/grammars/*.json ./packages/antlr",
+    "build:antlr-language:esbuild": "rimraf ./packages/antlr/grammars && rimraf -g ./packages/antlr/chunk*.js && tsx --tsconfig ./tsconfig.script.json ./script/antlr.esbuild.ts && cpx ./src/antlr/grammars/*.json ./packages/antlr",
     "publish:parser-antlr": "npm run build:antlr-language:esbuild && npm publish ./packages/antlr"
   },
   "repository": {
@@ -52,7 +52,7 @@
     "@types/inquirer": "^7.3.1",
     "@types/lodash": "^4.14.195",
     "@types/mocha": "^10.0.6",
-    "@types/node": "^18.17.0",
+    "@types/node": "^24.0.0",
     "@types/normalize-path": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
@@ -72,7 +72,7 @@
     "nyc": "^15.1.0",
     "prettier": "^2.8.8",
     "pretty-quick": "^3.1.3",
-    "rimraf": "^5.0.1",
+    "rimraf": "^6.1.3",
     "tree-sitter-cli": "^0.26.8",
     "tsconfig-paths": "^4.2.0",
     "tsx": "^4.7.2",

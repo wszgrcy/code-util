@@ -15,6 +15,7 @@ async function main() {
         splitting: true,
         tsconfig: 'tsconfig.build-antlr-parser.json',
         // outExtension: { '.js': '.mjs' },
+        platform: 'node',
     });
     await esbuild.build({
         // bundle: true,
