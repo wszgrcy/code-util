@@ -11,11 +11,12 @@ async function main() {
         outdir: path.join(process.cwd(), 'temp/antlr'),
         format: 'esm',
         keepNames: true,
-        minify: true,
+        minify: false,
         splitting: true,
         tsconfig: 'tsconfig.build-antlr-parser.json',
         // outExtension: { '.js': '.mjs' },
         platform: 'node',
+        sourcemap: true,
     });
     await esbuild.build({
         // bundle: true,
