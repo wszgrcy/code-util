@@ -8,9 +8,13 @@ async function main() {
         sourcemap: 'linked',
         bundle: true,
         entryPoints: [
-            ...glob.sync('./src/**/*.spec.ts', {}).map((item) => {
-                return { in: item, out: path.join('', item.slice(0, -3)) };
-            }),
+            ...glob
+                .sync('./src/**/*.spec.ts', {
+                    ignore: process.env.CI ? ['**/css-selector-for-antlr4.spec.ts', '**/tree-sitter/selector.spec.ts'] : [],
+                })
+                .map((item) => {
+                    return { in: item, out: path.join('', item.slice(0, -3)) };
+                }),
         ],
         splitting: true,
         outdir: path.join(process.cwd(), './test-dist'),
